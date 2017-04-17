@@ -20,10 +20,11 @@ def requires_authkey(func):
     return wrapper
 
 
-@your_decorator
-def some_function():
-    pass
+@requires_authkey
+def test_has_key(*args, **kwargs):
+    print('Successfully read: args: {} and kwargs: {}'.format(args, kwargs))
 
 
 if __name__ == '__main__':
-    some_function()
+    test_has_key(1, 2, 3, {'a': 1, 'b': 2})
+    test_has_key(1, 2, {'a': 1, 'b': 2}, authkey='a')
