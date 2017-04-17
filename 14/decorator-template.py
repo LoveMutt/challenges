@@ -11,9 +11,12 @@ def requires_authkey(func):
     """
     @wraps(func)  # preserves function meta data
     def wrapper(*args, **kwargs):
-        # do stuff before func
+        if not kwargs:
+            return not_authorized(func.__name__, *args, **kwargs)
+        authkey = kwargs.get('authkey', None)
+        if authkey is None:
+            return not_authorized(func.__name__)
         return func(*args, **kwargs)
-        # do stuff after func
     return wrapper
 
 
