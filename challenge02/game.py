@@ -36,10 +36,24 @@ def max_word_value(word_list=None):
 
 def draw_letters():
     """Select NUM_LETTERS letters from the pouch based on distribution"""
-    rands = []
     p = POUCH.copy()
     random.shuffle(p)
     return p[0:NUM_LETTERS]
+
+
+def get_possible_dict_words(letters):
+    """Find the valid words from letters that are found in DICTIONARY"""
+    pass
+
+
+def _get_permutations_draw(letters):
+    """Permute the drawn letters into all possible combinations"""
+    pass
+
+
+def _validation(word, letters):
+    """Validate that the word is possible with the given letters"""
+    pass
 
 
 def main():
