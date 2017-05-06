@@ -3,5 +3,7 @@
 **log
 **__pycache__
 **venv
+**drafts
 **config.py
 **.cache
+**sqlite
