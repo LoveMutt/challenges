@@ -2,6 +2,7 @@
 # Code Challenge 02 - Word Values Part II - a simple game
 # http://pybit.es/codechallenge02.html
 import random
+import itertools
 
 from challenge02.data import DICTIONARY, LETTER_SCORES, POUCH, _load_words
 
@@ -48,7 +49,7 @@ def get_possible_dict_words(letters):
 
 def _get_permutations_draw(letters):
     """Permute the drawn letters into all possible combinations"""
-    pass
+    return [''.join(p) for x in range(1, len(letters)+1) for p in itertools.permutations(letters, x) if len(p) > 0]
 
 
 def _validation(word, letters):
