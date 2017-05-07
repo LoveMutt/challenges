@@ -17,12 +17,10 @@ class TestGame(unittest.TestCase):
         letter_str = ''.join(self.draw)
         self.assertRegex(letter_str, r'^[A-Z]{%s}$' % NUM_LETTERS)
 
-    # from ch01
     def test_calc_word_value(self):
         self.assertEqual(calc_word_value('bob'), 7)
         self.assertEqual(calc_word_value('JuliaN'), 13)
 
-    # from ch01
     def test_max_word_value(self):
         self.assertEqual(max_word_value(TEST_WORDS), 'barbeque')
 
