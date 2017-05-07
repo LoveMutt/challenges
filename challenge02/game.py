@@ -66,7 +66,7 @@ def _validation(word, letters):
 
 def main():
     draw = draw_letters()
-    chosen = input('Form the word with the max value from {} >'.format(draw))
+    chosen = input('Form the word with the max value from {}> '.format(draw))
     chosen_val = calc_word_value(chosen)
     print('You chose "{}" that has a value of {}'.format(chosen, chosen_val))
     _validation(chosen, draw)
