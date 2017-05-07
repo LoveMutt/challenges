@@ -44,7 +44,9 @@ def draw_letters():
 
 def get_possible_dict_words(letters):
     """Find the valid words from letters that are found in DICTIONARY"""
-    pass
+    p = _get_permutations_draw(letters)  # type: str
+    dict_words = [word for word in p if word.lower() in DICTIONARY]
+    return dict_words
 
 
 def _get_permutations_draw(letters):
