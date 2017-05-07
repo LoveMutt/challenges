@@ -56,7 +56,12 @@ def _get_permutations_draw(letters):
 
 def _validation(word, letters):
     """Validate that the word is possible with the given letters"""
-    pass
+    tmp = letters.copy()
+    for c in word.upper():
+        tmp.pop(tmp.index(c))
+    if word.lower() not in DICTIONARY:
+        raise ValueError('{} is not a valid dicationary word'.format(word))
+    return True
 
 
 def main():
