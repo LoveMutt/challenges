@@ -130220,6 +130220,7 @@ oilometer
 oilpaper
 oilproof
 oilproofing
+oils
 oilseed
 oilskin
 oilskinned
