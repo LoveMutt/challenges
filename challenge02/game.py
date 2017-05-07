@@ -65,7 +65,15 @@ def _validation(word, letters):
 
 
 def main():
-    pass
+    draw = draw_letters()
+    chosen = input('Form the word with the max value from {} >'.format(draw))
+    chosen_val = calc_word_value(chosen)
+    print('You chose "{}" that has a value of {}'.format(chosen, chosen_val))
+    _validation(chosen, draw)
+    best_word = max_word_value(get_possible_dict_words(draw))
+    best_val = calc_word_value(best_word)
+    print('The optimal word is {} with value {}'.format(best_word, best_val))
+    print('You receive a score of {.2}'.format(100*chosen_val/best_val))
 
 
 if __name__ == "__main__":
